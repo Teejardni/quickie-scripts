@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  mysql-client:
+    image: mysql:latest
+    entrypoint: ["tail", "-f", "/dev/null"]
+    volumes:
+      - ./my.cnf:/root/.my.cnf:ro
