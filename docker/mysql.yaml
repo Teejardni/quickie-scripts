@@ -4,4 +4,4 @@ services:
     image: mysql:latest
     entrypoint: ["tail", "-f", "/dev/null"]
     volumes:
-      - ./my.cnf:/root/.my.cnf:ro
+      - ./.my.cnf:/root/.my.cnf:ro
