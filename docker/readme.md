@@ -12,6 +12,6 @@ Use this to run a docker container and connect to a remote mysql server.
     port=3306
     ```
 - docker compose -f mysql.yaml up -d
-- docker compose exec mysql-client mysql
+- docker compose -f mysql.yaml exec mysql-client mysql
 
 
