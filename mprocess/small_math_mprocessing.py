@@ -16,7 +16,7 @@ def divisor_sum(num):
 if __name__ == "__main__":
     seed = np.random.default_rng(66)
 
-    nums = seed.integers(low=0, high=10000000, size=50000)
+    nums = seed.integers(low=1000, high=10000000, size=50000)
 
     
     res = []
@@ -29,6 +29,21 @@ if __name__ == "__main__":
     start = time.time()
     with mu.Pool(processes=mu.cpu_count()) as pool:
         results = pool.map(divisor_sum, nums)
+        end = time.time()
+        print(f'no chunks {end - start}')
+        start = time.time()
+        res = pool.map(divisor_sum, nums, chunksize=1)
+        end = time.time()
+        print(f'chunk=1 {end - start}')
+        start = time.time()
+        pool.map(divisor_sum, nums, chunksize=50)
+        end = time.time()
+        print(f'chunk=50 {end - start}')
+        start = time.time()
+        pool.map(divisor_sum, nums, chunksize=500)
+        end = time.time()
+        print(f'chunk=500 {end - start}')
+        
 
-    end = time.time()
-    print(f"there are {len(results)} results done in {end - start}. Here are the first 5 values: {results[:5]}")
+    #end = time.time()
+    #print(f"there are {len(results)} results done in {end - start}. Here are the first 5 values: {results[:5]}")
