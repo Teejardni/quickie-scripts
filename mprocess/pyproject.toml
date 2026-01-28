@@ -1,0 +1,9 @@
+[project]
+name = "mprocess"
+version = "0.1.0"
+description = "Just a quick lil demo to implement multiprocessing in python"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.1",
+]
