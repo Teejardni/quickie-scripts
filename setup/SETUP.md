@@ -14,7 +14,21 @@ OR
 
 **3. VS Code**
 
-Python: add extensions for ruff, pyrefly and disable pylance. Make changes to settings using ***vs-code-python.json***
+Python: add extensions for ruff, pyrefly and disable pylance. Make changes to settings in JSON.
+
+```
+{
+    "python.languageServer": "None",
+    "python.pyrefly.displayTypeErrors": "force-on",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "files.autoSave": "afterDelay"
+}
+
+```
 
 **4. Desktop File template**
 
