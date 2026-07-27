@@ -1,0 +1,10 @@
+{
+    "python.languageServer": "None",
+    "python.pyrefly.displayTypeErrors": "force-on",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "files.autoSave": "afterDelay"
+}
